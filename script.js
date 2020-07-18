@@ -5,7 +5,6 @@ $(document).ready(function(){
 
 	$('#form').submit(function(event){
 		event.preventDefault()
-		alert("form is submitted")
 		var search = $("#search").val()
 		var maxResults = $("#maxResults").val()
 		var orderInput = $("#order-input").val()
@@ -14,6 +13,7 @@ $(document).ready(function(){
 	})
 
 	function videoSearch(key, search, maxResults, orderInput){
+		maxResults = maxResults || 10
 		$.get("https://www.googleapis.com/youtube/v3/search?key=" + key + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search +"&order=" + orderInput, function(data){
 			console.log(data)
 			data.items.forEach(item =>{
