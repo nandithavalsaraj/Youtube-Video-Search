@@ -6,11 +6,24 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="script.js"></script>
+	<style type="text/css">
+		html,body{
+			height: 100%;
+			width:100%;
+		}
+	</style>
 </head>
-<body>
-	<div class="container">
+<body style="background-color: black; position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top:10%">
+	<div class="container border-0 rounded" style="width: 70%; border: 2px solid black; background-color: white;">
 		<br><br>
-		<h1>Youtube Search</h1>
+		<h1 style="text-align: center;">Youtube Search</h1>
 		<br>
 		<form id="form">
 			<div class="form-group">
@@ -30,14 +43,14 @@
                 	<option value="viewCount" selected>View Count</option>
             </select>
 			</div>
-			<div class="form-group">
+			<div class="form-group" style="text-align:center">
 				<input type="submit" class="btn btn-danger" value="Search" >
 			</div>
 		</form>
 		<div class="row">
-			<div class="col-md-12">
+			<div >
 				<div id="videos">
-					
+				
 				</div>
 			</div>
 		</div>
